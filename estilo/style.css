@@ -41,7 +41,7 @@ div#tela{
     border: 3px solid #9b5607;
     background-color: white;
     height: 65px;
-    width: 255px;
+    width: 80%;
     margin: auto;
     margin-bottom: 15px;
     margin-top: 25px;
@@ -89,7 +89,7 @@ div#calculadora > p{
     padding-right: 15px;
 }
 
-@media screen and (min-width: 785px) {
+@media screen and (min-width: 320px) {
     #calculadora{
         max-width: 300px;
     }
