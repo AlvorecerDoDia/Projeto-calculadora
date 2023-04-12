@@ -7,9 +7,9 @@
 }
 
 :root{
-    --cor-botoes: #ffcd71;
-    --cor-calc: #e67f0a;
-    --cor-fundo: linear-gradient(150deg, #539cfc, #1630a5, #050d30)
+    --cor-botoes: #525252;
+    --cor-calc: #2e2e2eee;
+    --cor-fundo: linear-gradient(150deg, #0084ff,  #0c4377)
 }
 
 *{
@@ -38,7 +38,7 @@ div#calculadora{
 }
 
 div#tela{
-    border: 3px solid #9b5607;
+    border: 3px solid whitesmoke;
     background-color: white;
     height: 65px;
     width: 80%;
@@ -65,9 +65,9 @@ button{
     border-radius: 10px;
 
     background-color: var(--cor-botoes);
-    color: rgb(235, 233, 233);
+    color: rgb(230, 229, 229);
     box-shadow: inset -2px -3px 0px 0px rgba(0, 0, 0, 0.623);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.274);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.493);
     text-align: center;
     border: 1px solid #c96f08;
     cursor: pointer;
@@ -83,7 +83,7 @@ i{
 }
 
 div#calculadora > p{
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
     font: normal 8pt arial;
     text-align: end;
     padding-right: 15px;
