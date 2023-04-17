@@ -7,7 +7,8 @@
 }
 
 :root{
-    --cor-botoes: #242222;
+    --cor-botoes: #1a1919;
+    --cor-botoes-hover: #242222;
     --cor-calc: #1a1919;
     --cor-fundo: linear-gradient(150deg, #2a34fa, #090f30)
 }
@@ -52,24 +53,17 @@ div#tela{
     font-family:'Pocket Calculator', Arial, Helvetica, sans-serif;
     font-size: 5em;
     overflow: hidden;
-    border-bottom: 1px solid var(--cor-botoes);
+    border-bottom: 1px solid var(--cor-botoes-hover);
     color: white;
 }
 
 table{
-
-    margin: auto;
+    border-collapse: collapse;
+    
     margin-bottom: 10px;
 }
 
-table, tr, td{
-    width: 100vw;
-    height: 100%;
-}
 
-tr, td{
-    height: 10%;
-}
 
 
 button{
@@ -77,15 +71,15 @@ button{
     height: 100%;
     font-size: 20px;
     padding: 10px;
-   
     background-color: var(--cor-botoes);
     color: rgb(230, 229, 229);
     cursor: pointer;
-    border-collapse:unset;
-    
 }
+
+
+
 button:hover{
-    background-color: #fac259;
+    background-color: var(--cor-botoes-hover);
 }
 
 i{
