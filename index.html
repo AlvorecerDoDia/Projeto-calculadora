@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="mediaqueries/mediaquery.css" media="screen">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="mediaqueries/mediaquery.css">
+
     <title>Calculadora</title>
 </head>
+
 <body>
-    <div id="container">
-        <div id="calculadora">
+
+    <div id="calculadora">
+        <div id="tela"></div>
         
-            <div id="tela"></div>
-            <table>
-                <tr>
-                    <td><button class="btn" style="font-size: 1.3em;" onclick="clean()"><strong>C</strong></button></td>
-                    <td><button class="btn" onclick="backspace()"><i class="material-symbols-outlined">
-                        backspace
-                    </i></button> </td>
-                    <td><button class="btn" onclick="inserir('/')">/</button> </td>
-                    <td><button class="btn" onclick="inserir('*')">x</button> </td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="inserir('7')">7</button> </td>
-                    <td><button class="btn" onclick="inserir('8')">8</button> </td>
-                    <td><button class="btn" onclick="inserir('9')">9</button> </td>
-                    <td><button class="btn" onclick="inserir('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="inserir('4')">4</button> </td>
-                    <td><button class="btn" onclick="inserir('5')">5</button> </td>
-                    <td><button class="btn" onclick="inserir('6')">6</button> </td>
-                    <td><button class="btn" onclick="inserir('+')">+</button> </td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="inserir('1')">1</button> </td>
-                    <td><button class="btn" onclick="inserir('2')">2</button> </td>
-                    <td><button class="btn" onclick="inserir('3')">3</button> </td>
-                    <td rowspan="2"><button class="btn" style="height: 105px;" onclick="resultado()">=</button> </td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="btn" style="width: 100px;" onclick="inserir('0')">0</button> </td>
-                    <td><button class="btn" onclick="inserir('.')">.</button> </td>
-                </tr>
-        
-            </table>
-            <p>&copy; M.J</p>
+        <div id="container-btn">
+            <button class="btn" style="font-size: 1.3em;border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda);" onclick="clean()"><strong>DEL</strong></button>
+            <button class="btn" onclick="backspace()" style="border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda);"><i class="material-symbols-outlined">
+                    backspace
+                </i></button>
+            <button class="btn" onclick="inserir('/')" style="border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda);">/</button>
+            <button class="btn" onclick="inserir('*')" style="border-bottom: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda);">x</button>
+
+            <button class="num"  onclick="inserir('7')" style="border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-top: 1px solid var(--cor-borda);">7</button>
+            <button class="num" onclick="inserir('8')" style="border: 1px solid var(--cor-borda);">8</button>
+            <button class="num" onclick="inserir('9')"  style="border: 1px solid var(--cor-borda);">9</button>
+            <button class="btn" onclick="inserir('-')" style="border-top: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda); border-bottom: 1px solid var(--cor-borda);">-</button>
+
+            <button class="num" onclick="inserir('4')" style="border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-top: 1px solid var(--cor-borda);">4</button>
+            <button class="num" onclick="inserir('5')"  style="border: 1px solid var(--cor-borda);">5</button>
+            <button class="num" onclick="inserir('6')"  style="border: 1px solid var(--cor-borda);">6</button>
+            <button class="btn" onclick="inserir('+')" style="border-top: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda); border-bottom: 1px solid var(--cor-borda);">+</button>
+
+            <button class="num" onclick="inserir('1')" style="border-bottom: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-top: 1px solid var(--cor-borda);">1</button>
+            <button class="num" onclick="inserir('2')"  style="border: 1px solid var(--cor-borda);">2</button>
+            <button class="num" onclick="inserir('3')"  style="border: 1px solid var(--cor-borda);">3</button>
+            <button id="equal-btn" onclick="resultado()" style="border-top: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda);">=</button>
+            <button class="num" id="zero" onclick="inserir('0')" style="border-top: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda);">0</button>
+            <button class="btn" onclick="inserir('.')"  style="border-top: 1px solid var(--cor-borda); border-right: 1px solid var(--cor-borda); border-left: 1px solid var(--cor-borda); font-size: 1.5em;">.</button>
         </div>
+
+        <p>&copy; M.J</p>
     </div>
+
 </body>
 <script src="script.js"></script>
+
 </html>
