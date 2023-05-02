@@ -45,7 +45,7 @@ div#calculadora{
 }
 
 div#tela{
-    height: 70%;
+    height: 65px;
     width: 90%;
     margin: auto;
     margin-top: 25px;
@@ -75,7 +75,7 @@ div#calculadora > p{
 
 button{
     font-size: 1.7em;
-    color: var(--cor-botoes);
+    color: var(--num-tela);
     border: none;
     border-radius: 30px;
     background-color: var(--cor-back-botoes);
